@@ -28,7 +28,7 @@ st.markdown("""
         flex-direction: column;
         gap: 10px; /* Espacio entre mensajes */
         padding: 15px;
-        
+        background-color: #E5DDD5; /* Igual que el fondo de la aplicación para una apariencia sin fisuras */
         border-radius: 8px;
         box_shadow: 0 2px 5px rgba(0,0,0,0.1);
         max_height: 70vh; /* Limitar altura para permitir desplazamiento */
@@ -37,7 +37,7 @@ st.markdown("""
 
     /* Burbuja de mensaje para el cliente (alineado a la izquierda, verdoso) */
     .client-message {
-        background-color: #144d37; /* Verde WhatsApp para mensajes salientes */
+        background-color: #DCF8C6; /* Verde WhatsApp para mensajes salientes */
         color: #1a1a1a;
         padding: 10px 12px;
         border-radius: 10px;
@@ -126,7 +126,7 @@ usuarios = [u for u in usuarios if '-' in u and u.split('-')[1] != 'N/A']
 # --- Barra lateral (Sidebar) ---
 # Sidebar
 st.sidebar.title("Opciones")
-st.sidebar.header("Visualizar Chats de Clientes")
+st.sidebar.header("Chats de Clientes")
 
 # --- Contenido principal ---
 # Main content
