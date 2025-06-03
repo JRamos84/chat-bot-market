@@ -20,18 +20,11 @@ usuarios = [f"{usuario.get('nombre', 'Desconocido')}-{usuario.get('numero_telefo
 # Filter users who do not have a valid phone number to avoid split errors
 usuarios = [u for u in usuarios if '-' in u and u.split('-')[1] != 'N/A']
 
-# --- Sidebar ---
-st.sidebar.title("Opciones")
-st.sidebar.header("Chats de Clientes")
 
 # --- Main content ---
 st.title("Distribuidora Ramos ChatsBots")
 
-# Create tabs
-tab1, tab2 = st.tabs(["Chats de Clientes", "Calendario"])
 
-with tab1:
-    render_chat_tab(usuarios, chat_data)
+render_chat_tab(usuarios, chat_data)
 
-with tab2:
-    render_calendar_tab()
+
